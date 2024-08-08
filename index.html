@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comp Sci High</title>
+    <style>
+        /* Add your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        #more-info-section {
+            display: none;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 48%; /* Adjust the width of the images as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Comp Sci High</h1>
+        <nav>
+            <button onclick="toggleSections()">Home</button>
+            <button onclick="toggleSections()">More Info</button>
+        </nav>
+    </header>
+
+    <section id="home-section">
+        <h2>Comp Sci High is the best school ever because it has sick teachers like Mr. Berri and Mr. Chombers.</h2>
+        <div class="image-container">
+            <img src="berrios.jpeg" alt="Image 1">
+            <img src="chambers.jpeg" alt="Image 2">
+        </div>
+        <p>Are you interested in joining the CSH family?</p>
+        <form onsubmit="submitForm(event)">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="more-info-section">
+        <!-- Add more info content here -->
+    </section>
+
+    <script>
+        function toggleSections() {
+            var homeSection = document.getElementById("home-section");
+            var moreInfoSection = document.getElementById("more-info-section");
+
+            if (homeSection.style.display === "block") {
+                homeSection.style.display = "none";
+                moreInfoSection.style.display = "block";
+            } else {
+                homeSection.style.display = "block";
+                moreInfoSection.style.display = "none";
+            }
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            var email = document.getElementById("email").value;
+            alert("Thank you for your interest! We'll contact you at " + email);
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comp Sci High</title>
+    <style>
+        body {
+            background-color: green; /* Change this to your desired color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: orange;
+            padding: 1em;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        #more-info-section {
+            display: none;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 48%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Rest of your HTML code -->
+</body>
+</html>
